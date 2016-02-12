@@ -1,5 +1,9 @@
 Option Explicit
 
+' Copyright (c) 2016 Masamitsu MURASE
+' Released under the MIT license
+' https://github.com/masamitsu-murase/external_editor_for_outlook2010/blob/master/README.md
+
 '-----------------------------------------------------------------------
 ' Path to editor
 Private Const EDITOR_PATH As String = "C:\my_program\xyzzy\xyzzy.exe"

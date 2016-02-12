@@ -11,7 +11,7 @@ This is VBA macro to edit mail content with an external editor in Outlook 2010.
 2. Open VB Editor.  
    Press "Alt" + "F11" to open it.
 3. Create a new module and rename it to "ExternalEditor".
-4. Copy and paste source code of "external_editor.vbs" to the module.
+4. Copy and paste source code of "external_editor.vba" to the module.
 5. Configure `EDITOR_PATH` and `TEMP_DIR` based on your environment.
 6. Open "ThisOutlookSession" and add the following source code.  
    This is not mandatory, but it ensures to release all resources.  
@@ -34,7 +34,7 @@ This is VBA macro to edit mail content with an external editor in Outlook 2010.
 
 ## Configurations
 
-You can configure the environment of your external editor with the following constants. You can find them at the beginning of "external_editor.vbs".
+You can configure the environment of your external editor with the following constants. You can find them at the beginning of "external_editor.vba".
 
 * `EDITOR_PATH`  
   Absolute path to your external editor  
