@@ -51,6 +51,8 @@ You can configure the environment of your external editor with the following con
 ## Note and limitations
 
 * If you edit your mail content within the mail editor of Outlook while you edit it within the external editor, the content edited in Outlook editor will be lost when you close the external editor.
+* Temporary files are saved as UTF-8 with BOM.  
+  Your external editor should support this encoding.
 * This macro is under development. If you are unlucky, you may face a crash of Outlook...
 
 
