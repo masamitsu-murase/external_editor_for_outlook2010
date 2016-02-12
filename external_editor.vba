@@ -92,7 +92,7 @@ End Function
 
 Private Function CurrentMailItem() As Object
   Dim inspector As Object
-  Dim Item As Object
+  Dim item As Object
 
   Set inspector = Application.ActiveInspector
   If inspector Is Nothing Then
@@ -100,15 +100,15 @@ Private Function CurrentMailItem() As Object
     Exit Function
   End If
 
-  Set Item = inspector.CurrentItem
-  If Item Is Nothing Then
+  Set item = inspector.CurrentItem
+  If item Is Nothing Then
     Set CurrentMailItem = Nothing
     Exit Function
   End If
 
   ' TODO type check
 
-  Set CurrentMailItem = Item
+  Set CurrentMailItem = item
 End Function
 
 Private Function SaveMailToTempFile(filename As String, mailItem As Object) As Boolean
