@@ -89,7 +89,7 @@ Private Function TempFileName() As String
   Dim filename As String
 
   counter = counter + 1
-  filename = TEMP_DIR & "mail_" & Format(Now(), "yyyyMMdd_HHmmss") & "_" & counter & TEMP_FILE_EXTENSION
+  filename = TEMP_DIR & "\mail_" & Format(Now(), "yyyyMMdd_HHmmss") & "_" & counter & TEMP_FILE_EXTENSION
 
   TempFileName = filename
 End Function
