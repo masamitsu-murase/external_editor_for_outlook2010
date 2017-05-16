@@ -9,6 +9,10 @@ Option Explicit
 Private Const EDITOR_PATH As String = "C:\my_program\xyzzy\xyzzy.exe"
 ' Directory for temporary files
 Private Const TEMP_DIR As String = "M:\temp\"
+' Extension for temporary files
+'   Usually one of ".txt" or ".eml"
+'   Some editors treat .eml files specially (line breaks etc.)
+Private Const TEMP_FILE_EXTENSION = ".eml"
 ' Remove temporary files
 '   For fail safe, keep them now.
 Private Const REMOVE_TEMP_FILES As Boolean = False
@@ -85,7 +89,7 @@ Private Function TempFileName() As String
   Dim filename As String
 
   counter = counter + 1
-  filename = TEMP_DIR & "mail_" & Format(Now(), "yyyyMMdd_HHmmss") & "_" & counter & ".txt"
+  filename = TEMP_DIR & "\mail_" & Format(Now(), "yyyyMMdd_HHmmss") & "_" & counter & TEMP_FILE_EXTENSION
 
   TempFileName = filename
 End Function
