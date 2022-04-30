@@ -172,7 +172,7 @@ Private Sub SaveMailInfo(procHandle As LongPtr, filename As String, mailItem As 
   info.Add "procHandle", procHandle
   info.Add "filename", filename
   info.Add "mailItem", mailItem
-  gMailInfo.Add procHandle, info
+  gMailInfo.Add CStr(procHandle), info
 End Sub
 
 Private Sub LoadTempFileToMail(filename As String, mailItem As Object)
@@ -229,8 +229,8 @@ Private Sub TimerProc(ByVal hWnd As LongPtr, ByVal msg As Long, ByVal wp As Long
     keys = gMailInfo.keys
     Dim i As Long
     For i = 0 To UBound(keys)
-      If WaitForSingleObject(keys(i), 0) = WAIT_OBJECT_0 Then
-        CloseHandle keys(i)
+      If WaitForSingleObject(CLngPtr(keys(i)), 0) = WAIT_OBJECT_0 Then
+        CloseHandle CLngPtr(keys(i))
 
         ' Editor is closed!
         Dim mailInfo As Object
@@ -294,7 +294,7 @@ Public Sub FinishOpenInExternalEditor()
     keys = gMailInfo.keys
     Dim i As Long
     For i = 0 To UBound(keys)
-      CloseHandle keys(i)
+      CloseHandle CLngPtr(keys(i))
       gMailInfo.Remove keys(i)
     Next
   End If
